@@ -104,7 +104,9 @@ alias godev="cd ~/dev"
 alias gorepo="cd ~/dev/repo"
 alias profile="vi ~/.zshrc"
 alias src="source ~/.zshrc"
+alias profile-cp="cp ~/.zshrc ~/dev/repo/dotfiles/.zshrc"
 
 # Add path to prompt
 export PROMPT='%n %~ > '
 
+set -o vi
