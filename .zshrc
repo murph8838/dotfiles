@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH="/opt/homebrew/lib/ruby/gems/3.3.0/bin:/opt/homebrew/opt/ruby/bin:$PATH"
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -105,8 +105,21 @@ alias gorepo="cd ~/dev/repo"
 alias profile="vi ~/.zshrc"
 alias src="source ~/.zshrc"
 alias profile-cp="cp ~/.zshrc ~/dev/repo/dotfiles/.zshrc"
+alias gs="git status"
+alias push="git push origin"
+alias pull="git pull origin"
+alias gc="git commit -m"
 
 # Add path to prompt
 export PROMPT='%n %~ > '
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Bind Escape+/ to history search
+bindkey -v # Enable vi keybindings
+
 set -o vi
+
+ulimit -n 1048576
